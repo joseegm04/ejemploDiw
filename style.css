@@ -1,0 +1,44 @@
+body{
+  background-color: antiquewhite;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset{
+  background-color: white;
+}
+
+input, select, textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+} 
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+label[for="checkbox"], label[for="checkbox"]{
+  font-weight: bold;
+  display: inline-block;
+}
+
+input#color{
+  height: 45px;
+  box-sizing: border-box;
+}
+
+br{
+  margin-top: 20px;
+}
+
+meter {
+  width: 100%;
+}

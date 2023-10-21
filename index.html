@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario congreso</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="./procesar.php">
+            <fieldset>
+                <legend><b>Datos personales</b></legend>
+                <label for="nombre">Nombre completo*</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <br>
+                <label for="color">Color para la tarjeta</label>
+                <input type="color" name="color" id="color">
+                <br>
+                <label for="correo">Correo electrónico*</label>
+                <input type="email" name="correo" id="correo" required>
+                <br>
+                <label for="telefono">Teléfono de contacto*</label>
+                <input type="tel" name="telefono" id="telefono" required>
+                <br>
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento">
+                <br>
+                <label for="paises">País de residencia</label>
+                <select name="paises">
+                    <option value="1">España</option>
+                    <option value="2">Inglaterra</option>
+                    <option value="3">Marruecos</option>
+                    <option value="4">Francia</option>
+                </select>
+                <br>
+                <label for="genero">Género</label>
+                <select name="genero">
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">Otro</option>
+                    <option value="4">Prefiero no decirlo</option>
+                </select>
+                <br>
+                <label for="profesion">Profesión u ocupación</label>
+                <input type="text" name="profesion" id="profesion">
+                <br>
+                <label for="educacion">Nivel de educación</label>
+                <select name="educacion">
+                    <option value="1">Primaria</option>
+                    <option value="2">Secundaria</option>
+                    <option value="3">Universidad</option>
+                    <option value="4">Grado medio</option>
+                    <option value="5">Grado superior</option>
+                </select>
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Adaptabilidad</b></legend>
+                <label for="dieta">Preferencias dietéticas:</label>
+                <input type="checkbox" name="dieta" value="vegetariana" id="vegetariana">
+                <label for="vegetariana">Vegetariana</label>
+                <input type="checkbox" name="dieta" value="vegana" id="vegana">
+                <label for="vegana">Vegana</label>
+                <input type="checkbox" name="dieta" value="singluten" id="singluten">
+                <label for="singluten">Sin gluten</label>
+                <br>
+                <label for="transporte">Preferencias de transporte</label>
+                <select name="transporte">
+                    <option value="1">Coche</option>
+                    <option value="2">Transporte público</option>
+                    <option value="3">Universidad</option>
+                    <option value="4">Caminar</option>
+                </select>
+                <br>
+                <label for="idioma">Idioma preferido:</label>
+                <input type="radio" name="idioma" value="español" id="español">
+                <label for="español">Español</label>
+                <input type="radio" name="idioma" value="ingles" id="ingles" checked>
+                <label for="ingles">Inglés</label>
+                <input type="radio" name="idioma" value="frances" id="frances">
+                <label for="frances">Francés</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Congreso</b></legend>
+                <label for="conferencias">Conferencias elegidas:</label>
+                <input type="checkbox" name="conferencias" value="conferencia1" id="conferencia1">
+                <label for="conferencia1">Conferencia 1</label>
+                <input type="checkbox" name="conferencias" value="conferencia2" id="conferencia2">
+                <label for="conferencia2">Conferencia 2</label>
+                <input type="checkbox" name="conferencias" value="conferencia3" id="conferencia3">
+                <label for="conferencia3">Conferencia 3</label>
+                <br>
+                <label for="talleres">Talleres elegidos:</label>
+                <input type="checkbox" name="talleres" value="taller1" id="taller1">
+                <label for="taller1">Taller 1</label>
+                <input type="checkbox" name="talleres" value="taller2" id="taller2">
+                <label for="taller2">Taller 2</label>
+                <input type="checkbox" name="talleres" value="taller3" id="taller3">
+                <label for="taller3">Taller 3</label>
+                <br>
+                <label for="alojamiento">Alojamiento requerido</label>
+                <input type="radio" name="alojamiento" value="si" id="si">
+                <label for="español">Sí</label>
+                <input type="radio" name="alojamiento" value="no" id="no">
+                <label for="ingles">No</label>
+                <br>
+                <label for="llegada">Fecha de llegada</label>
+                <input type="date" name="llegada" id="llegada" min="2023-10-16">
+                <br>
+                <label for="salida">Fecha de salida</label>
+                <input type="date" name="salida" id="llegada" max="2023-10-20">
+                <br>
+                <label for="acompanantes">Número de acompañantes</label>
+                <input type="number" name="acompanantes" id="acompanantes" max="3">
+                <br>
+                <label for="preferencias">Preferencias especiales</label>
+                <textarea id="preferencias" name="preferencias" ></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Archivos</b></legend>
+                <label for="cv">Cargar CV (opcional)</label>
+                <input type="file" name="cv" id="cv" accept=".pdf">
+                <br>
+                <label for="fotoPerfil">Cargar foto de perfil (opcional)</label>
+                <input type="file" name="fotoPerfil" id="fotoPerfil" accept="image/png, .jpeg, .jpg">
+            </fieldset>
+            
+            <input type="submit" name="guardar" id="guardar" value="Guardar cambios">
+            <input type="reset" name="borrar" id="borrar" value="Borrar los datos introducidos">
+            
+            <br>
+            <label for="ocupacion">Ocupación del congreso:</label>
+            <meter id="ocupacion" min="0" max="10000" value="6033">at 6033/10000</meter>
+        </form>
+    </div>
+</body>
+</html>
